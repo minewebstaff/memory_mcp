@@ -3,6 +3,7 @@ import json
 import os
 import uuid
 from datetime import datetime
+
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("Memory Service")
@@ -269,6 +270,7 @@ def get_memory_info() -> str:
     )
 
 if __name__ == "__main__":
+    print(os.getcwd())
     load_memory_from_file()
     mcp.run(transport='stdio')
     
